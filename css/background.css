@@ -1,0 +1,8 @@
+#web_bg {
+  /* 背景图像的地址（url括号里）  */
+  background: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.vjshi.com%2F2021-07-21%2Fa0e292b396edb717bb2d0cd94ffbc870%2Fonline%2Fb41573855c4c4208bc7eb06c25ca04b9.jpg%3Fx-oss-process%3Dstyle%2Fresize_w_720&refer=http%3A%2F%2Fpic.vjshi.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668258090&t=10bf3f25d54baa8b15c48383ed9d54ba);
+  /* 背景图像不重复 */
+  background-repeat: no-repeat;
+  /* 背景图像大小 */
+  background-size: cover;
+}
