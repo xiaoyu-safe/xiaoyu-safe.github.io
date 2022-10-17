@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>JavaScript笔记 | 小余同学的个人博客</title><meta name="keywords" content="JS"><meta name="author" content="小余同学"><meta name="copyright" content="小余同学"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="JS学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript笔记">
+<meta property="og:url" content="http://xysafe.tk/2022/06/13/js%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="小余同学的个人博客">
+<meta property="og:description" content="JS学习笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://xysafe.tk/images/js.jpeg">
+<meta property="article:published_time" content="2022-06-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-06-13T16:00:00.000Z">
+<meta property="article:author" content="小余同学">
+<meta property="article:tag" content="JS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://xysafe.tk/images/js.jpeg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://xysafe.tk/2022/06/13/js%E7%AC%94%E8%AE%B0/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="/%E5%B0%8F%E4%BD%99%E5%90%8C%E5%AD%A6%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'JavaScript笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-06-14 00:00:00'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/wordbg.css"><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/fish.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/pictures/"><i class="fa-fw fas fa-image"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/js.jpeg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">小余同学的个人博客</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/pictures/"><i class="fa-fw fas fa-image"></i><span> 图库</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">JavaScript笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-06-12T16:00:00.000Z" title="发表于 2022-06-13 00:00:00">2022-06-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-06-13T16:00:00.000Z" title="更新于 2022-06-14 00:00:00">2022-06-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="JavaScript笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="JavaScript定义"><a href="#JavaScript定义" class="headerlink" title="JavaScript定义 :"></a>JavaScript定义 :</h1><p>JavaScript是运行在浏览器端的脚本语言，JavaScript主要解决的是前端与用户交互的问题，包括使用交互与数据交互。JavaScript是浏览器解释执行的 . </p>
+<h1 id="JavaScript特点"><a href="#JavaScript特点" class="headerlink" title="JavaScript特点 :"></a>JavaScript特点 :</h1><ul>
+<li>可以直接嵌入到HTML代码中进行混排</li>
+<li>跨平台</li>
+<li>兼容性</li>
+</ul>
+<h1 id="JavaScript能做什么"><a href="#JavaScript能做什么" class="headerlink" title="JavaScript能做什么 :"></a>JavaScript能做什么 :</h1><ul>
+<li>特效</li>
+<li>表单验证</li>
+</ul>
+<h1 id="JavaScript-语法"><a href="#JavaScript-语法" class="headerlink" title="JavaScript 语法 :"></a>JavaScript 语法 :</h1><h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景 :"></a>使用场景 :</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">第一种直接写入:<span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/JavaScript&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">第二种外部引入:<span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;1.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">第三种a标签写入:<span class="language-xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>&quot;<span class="attr">JavaScript:void</span>(<span class="attr">0</span>)&quot;&gt;</span>a标签的方式<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span>			<span class="comment">//阻止跳转</span></span><br><span class="line"></span><br><span class="line">第四种方式 标签属性: <span class="language-xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">&quot;alert(1234)&quot;</span>&gt;</span>点击按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span> 鼠标左键单击事件</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明 :"></a>变量声明 :</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt; </span><br><span class="line">    <span class="keyword">var</span> 变量名字 = <span class="number">100</span>; </span><br><span class="line">	<span class="keyword">var</span>	num	=<span class="number">200</span>;</span><br><span class="line">	<span class="keyword">var</span>	num	=<span class="number">300</span>;</span><br><span class="line"></span><br><span class="line">	<span class="variable language_">document</span>.<span class="title function_">write</span>(num);				<span class="comment">// 在屏幕显示,打印变量.</span></span><br><span class="line"></span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(num);					<span class="comment">//在F12控制台里面显示.		</span></span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 请注意 , 变量是从上往下执行 , 变量名会被下面的变量名覆盖 . </span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="变量命名规则"><a href="#变量命名规则" class="headerlink" title="变量命名规则 :"></a>变量命名规则 :</h2><ul>
+<li>字母数字下划线($)</li>
+<li>首字母不能为数字</li>
+<li>严格区分大小写</li>
+<li>且不能使用关键字</li>
+</ul>
+<h2 id="代码注释"><a href="#代码注释" class="headerlink" title="代码注释 :"></a>代码注释 :</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 单行注释</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">多行注释</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="JavaScript数据类型"><a href="#JavaScript数据类型" class="headerlink" title="JavaScript数据类型 :"></a>JavaScript数据类型 :</h2><h3 id="字符串类型-string"><a href="#字符串类型-string" class="headerlink" title="字符串类型(string)"></a>字符串类型(string)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;string&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>PS : 双引号与单引号都不能解析变量.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;test&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="string">&quot;halo&#x27;str&#x27;world&quot;</span>);			<span class="comment">//单引号可以嵌套双引号,双引号可以嵌套单引号,不能单引号相互嵌套.</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//想要解析变量 , 可以使用 + 连接符</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> x = <span class="string">&#x27;哈哈哈&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;hello&#x27;</span>+x+ <span class="string">&#x27;world&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(str);</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="如果想让JS执行html代码-需要用-反引号"><a href="#如果想让JS执行html代码-需要用-反引号" class="headerlink" title="如果想让JS执行html代码 , 需要用 反引号 ."></a>如果想让JS执行html代码 , 需要用 反引号 .</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">``</span><br><span class="line">var z = ` <span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">th</span>&gt;</span>test<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">td</span>&gt;</span>test1<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span>`</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符 :"></a>特殊字符 :</h3><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\n 换行</span><br><span class="line">\r 回车</span><br><span class="line">\t 制表符		<span class="literal">tab</span>键</span><br><span class="line"></span><br><span class="line">示例 : </span><br><span class="line">	<span class="keyword">var</span> z = <span class="string">&#x27;halo wor\r\nld&#x27;</span></span><br><span class="line">	<span class="built_in">console</span>.<span class="built_in">log</span>(z);</span><br><span class="line">	</span><br><span class="line">请注意 : 单引号和双引号可以解析转义字符</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="布尔类型-boolean"><a href="#布尔类型-boolean" class="headerlink" title="布尔类型(boolean)"></a>布尔类型(boolean)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bool = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> bool = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">write</span>(<span class="title function_">typeof</span>(bool));			<span class="comment">// typeof 检测变量类型</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//请注意 : 布尔类型必须是小写的  不能是大写.</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="数值类型-number"><a href="#数值类型-number" class="headerlink" title="数值类型(number)"></a>数值类型(number)</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var num <span class="operator">=</span> <span class="number">100</span><span class="comment">;</span></span><br><span class="line"></span><br><span class="line">var num <span class="operator">=</span> <span class="number">3.146</span><span class="comment">;</span></span><br><span class="line"></span><br><span class="line">var num <span class="operator">=</span> <span class="number">0</span>x23<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">var num <span class="operator">=</span> NaN<span class="comment">;  简称 not a number  (特殊类型,任何和NAN做运算,返回结果都是NAN.其他数值与NAN做比较返回值都是fales)</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="对象类型"><a href="#对象类型" class="headerlink" title="对象类型 :"></a>对象类型 :</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var z <span class="operator">=</span> new object()<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">var z <span class="operator">=</span> &#123;&#125;<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="数组类型"><a href="#数组类型" class="headerlink" title="数组类型 :"></a>数组类型 :</h3><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr=<span class="keyword">new</span> <span class="built_in">Array</span>()</span><br><span class="line"><span class="keyword">var</span> arr=[ ]</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="空对象类型"><a href="#空对象类型" class="headerlink" title="空对象类型 :"></a>空对象类型 :</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="literal">null</span>=<span class="literal">null</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="自定义函数"><a href="#自定义函数" class="headerlink" title="自定义函数 :"></a>自定义函数 :</h3><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">func</span><span class="params">()</span>&#123;</span><br><span class="line"></span><br><span class="line">	&#125;					<span class="comment">//命名函数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> res = <span class="keyword">function</span><span class="params">()</span>&#123;</span><br><span class="line"></span><br><span class="line">	&#125;					<span class="comment">//匿名函数</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="undefined-类型"><a href="#undefined-类型" class="headerlink" title="undefined 类型 :"></a>undefined 类型 :</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var z<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换 :"></a>数据类型转换 :</h2><h3 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换 :"></a>强制类型转换 :</h3><ul>
+<li><h3 id="parseInt-强制转换成整数类型"><a href="#parseInt-强制转换成整数类型" class="headerlink" title="parseInt : 强制转换成整数类型"></a>parseInt : 强制转换成整数类型</h3></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;200px&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;200.15&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;abc100&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="literal">true</span>/<span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//强制转换范围 : 从第一个数字开始 , 到最后一个数字结束 . </span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">1 . 如果是纯数字的话 则直接返回数字类型的值 </span></span><br><span class="line"><span class="comment">2 . 如果首字母是数字,则截取到第一个不是数字之前的数字返回</span></span><br><span class="line"><span class="comment">3 . 如果首字母不是数字,返回NaN</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><h3 id="parseFloat-强制转换成小数点"><a href="#parseFloat-强制转换成小数点" class="headerlink" title="parseFloat : 强制转换成小数点"></a>parseFloat : 强制转换成小数点</h3></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;300.14px&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;2.35&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="literal">true</span>; </span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><h3 id="Number-转成数值类型"><a href="#Number-转成数值类型" class="headerlink" title="Number : 转成数值类型"></a>Number : 转成数值类型</h3></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;200&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;200kg&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> x = <span class="title function_">number</span>(str);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">(1)纯数字转化成数字 如果中间有非数字 则直接返回NaN</span></span><br><span class="line"><span class="comment">(2)true =&gt; 1    false =&gt; 0</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><h3 id="String-转换成字符串"><a href="#String-转换成字符串" class="headerlink" title="String : 转换成字符串"></a>String : 转换成字符串</h3></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bool = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> bool = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">var</span> nulls = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">var</span> uns = <span class="literal">undefined</span>;</span><br><span class="line"><span class="keyword">var</span> nums = <span class="number">300</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> x = <span class="title function_">string</span>(bool);</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><h3 id="Boolean-转换成布尔类型"><a href="#Boolean-转换成布尔类型" class="headerlink" title="Boolean : 转换成布尔类型"></a>Boolean : 转换成布尔类型</h3></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> z = <span class="number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> x = <span class="title class_">Boolean</span>(z);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">0, 0.0, “”, false, null, undefined, NaN, 这些都为假 其他为真.</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换 :"></a>自动类型转换 :</h3><p>1 . 自动计算(用Number自动转换) :</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="string">&#x27;200&#x27;</span>+<span class="number">30</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.write(x);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在JS中 + 代表两种   第一种 : 连接符的作用   第二种 : 运算作用</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//小测试</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> z = <span class="number">20</span>+<span class="number">30</span>+<span class="string">&#x27;10&#x27;</span>	???</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> x = <span class="string">&#x27;10&#x27;</span>+<span class="number">20</span>+<span class="number">30</span>	???</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> c = <span class="keyword">true</span>+<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> v = <span class="keyword">false</span>+<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> s = <span class="string">&#x27;30px&#x27;</span><span class="number">-10</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> v = <span class="string">&#x27;20&#x27;</span>*<span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> v = <span class="string">&#x27;20&#x27;</span>/<span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://xysafe.tk">小余同学</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://xysafe.tk/2022/06/13/js%E7%AC%94%E8%AE%B0/">http://xysafe.tk/2022/06/13/js%E7%AC%94%E8%AE%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">转载请注明出处<a href='https://xysafe.tk'>小余同学的个人博客</a>!!！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/JS/">JS</a></div><div class="post_share"><div class="social-share" data-image="/images/js.jpeg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/06/22/mysql%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0/"><img class="prev-cover" src="/images/mysql.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">mysql学习笔记</div></div></a></div><div class="next-post pull-right"><a href="/2022/06/12/CSS_01/"><img class="next-cover" src="/images/css.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">CSS笔记</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/fish.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">小余同学</div><div class="author-info__description">安危相易，祸福相生，缓急相摩，聚散以成。</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">16</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" href="https://xysafe.tk/categories/"><i class="fas fa-book-open"></i><span>分类文章</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript%E5%AE%9A%E4%B9%89"><span class="toc-number">1.</span> <span class="toc-text">JavaScript定义 :</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript%E7%89%B9%E7%82%B9"><span class="toc-number">2.</span> <span class="toc-text">JavaScript特点 :</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88"><span class="toc-number">3.</span> <span class="toc-text">JavaScript能做什么 :</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript-%E8%AF%AD%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">JavaScript 语法 :</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">4.1.</span> <span class="toc-text">使用场景 :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E"><span class="toc-number">4.2.</span> <span class="toc-text">变量声明 :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="toc-number">4.3.</span> <span class="toc-text">变量命名规则 :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E6%B3%A8%E9%87%8A"><span class="toc-number">4.4.</span> <span class="toc-text">代码注释 :</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.5.</span> <span class="toc-text">JavaScript数据类型 :</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%B1%BB%E5%9E%8B-string"><span class="toc-number">4.5.1.</span> <span class="toc-text">字符串类型(string)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E6%83%B3%E8%AE%A9JS%E6%89%A7%E8%A1%8Chtml%E4%BB%A3%E7%A0%81-%E9%9C%80%E8%A6%81%E7%94%A8-%E5%8F%8D%E5%BC%95%E5%8F%B7"><span class="toc-number">4.5.2.</span> <span class="toc-text">如果想让JS执行html代码 , 需要用 反引号 .</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"><span class="toc-number">4.5.3.</span> <span class="toc-text">特殊字符 :</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B-boolean"><span class="toc-number">4.5.4.</span> <span class="toc-text">布尔类型(boolean)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B-number"><span class="toc-number">4.5.5.</span> <span class="toc-text">数值类型(number)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.5.6.</span> <span class="toc-text">对象类型 :</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.5.7.</span> <span class="toc-text">数组类型 :</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A9%BA%E5%AF%B9%E8%B1%A1%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.5.8.</span> <span class="toc-text">空对象类型 :</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0"><span class="toc-number">4.5.9.</span> <span class="toc-text">自定义函数 :</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined-%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.5.10.</span> <span class="toc-text">undefined 类型 :</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">4.6.</span> <span class="toc-text">数据类型转换 :</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">4.6.1.</span> <span class="toc-text">强制类型转换 :</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#parseInt-%E5%BC%BA%E5%88%B6%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.6.2.</span> <span class="toc-text">parseInt : 强制转换成整数类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#parseFloat-%E5%BC%BA%E5%88%B6%E8%BD%AC%E6%8D%A2%E6%88%90%E5%B0%8F%E6%95%B0%E7%82%B9"><span class="toc-number">4.6.3.</span> <span class="toc-text">parseFloat : 强制转换成小数点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Number-%E8%BD%AC%E6%88%90%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.6.4.</span> <span class="toc-text">Number : 转成数值类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-%E8%BD%AC%E6%8D%A2%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">4.6.5.</span> <span class="toc-text">String : 转换成字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boolean-%E8%BD%AC%E6%8D%A2%E6%88%90%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.6.6.</span> <span class="toc-text">Boolean : 转换成布尔类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">4.6.7.</span> <span class="toc-text">自动类型转换 :</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/10/15/%E5%86%B0%E8%9D%8E%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/" title="冰蝎流量分析"><img src="/images/%E5%86%B0%E8%9D%8E.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="冰蝎流量分析"/></a><div class="content"><a class="title" href="/2022/10/15/%E5%86%B0%E8%9D%8E%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90/" title="冰蝎流量分析">冰蝎流量分析</a><time datetime="2022-10-14T16:00:00.000Z" title="发表于 2022-10-15 00:00:00">2022-10-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/13/SSRF%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/" title="SSRF漏洞复现"><img src="/images/ssrf2.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SSRF漏洞复现"/></a><div class="content"><a class="title" href="/2022/10/13/SSRF%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/" title="SSRF漏洞复现">SSRF漏洞复现</a><time datetime="2022-10-12T16:00:00.000Z" title="发表于 2022-10-13 00:00:00">2022-10-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/13/%E4%BB%BB%E6%84%8F%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C/" title="任意代码&amp;命令执行"><img src="/images/%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="任意代码&amp;命令执行"/></a><div class="content"><a class="title" href="/2022/10/13/%E4%BB%BB%E6%84%8F%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C/" title="任意代码&amp;命令执行">任意代码&amp;命令执行</a><time datetime="2022-10-12T16:00:00.000Z" title="发表于 2022-10-13 00:00:00">2022-10-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/12/SSRF%E7%AC%94%E8%AE%B0/" title="SSRF漏洞"><img src="/images/ssrf.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="SSRF漏洞"/></a><div class="content"><a class="title" href="/2022/10/12/SSRF%E7%AC%94%E8%AE%B0/" title="SSRF漏洞">SSRF漏洞</a><time datetime="2022-10-11T16:00:00.000Z" title="发表于 2022-10-12 00:00:00">2022-10-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/03/webshell%E5%85%8D%E6%9D%80%E7%BB%83%E4%B9%A0/" title="webshell免杀练习"><img src="/images/webshell2.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="webshell免杀练习"/></a><div class="content"><a class="title" href="/2022/10/03/webshell%E5%85%8D%E6%9D%80%E7%BB%83%E4%B9%A0/" title="webshell免杀练习">webshell免杀练习</a><time datetime="2022-10-02T16:00:00.000Z" title="发表于 2022-10-03 00:00:00">2022-10-03</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/images/js.jpeg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 小余同学</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
